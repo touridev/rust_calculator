@@ -20,4 +20,22 @@ fn main() {
     io::stdin().read_line(&mut op).expect("Failed to read line");
     let op = op.trim();
 
+    let result = match op {
+        "+" => num1 + num2,
+        "-" => num1 - num2,
+        "*" => num1 * num2,
+        "/" => {
+            if num2 != 0.0 { num1 / num2 } else { 
+                println!("Cannot divide by zero!"); 
+                return; 
+            }
+        }
+        _ => {
+            println!("Invalid operation!"); 
+            return;
+        }
+    };
+
+    println!("Result: {}", result);
+
 }
