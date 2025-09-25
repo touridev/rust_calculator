@@ -13,4 +13,11 @@ fn main() {
     let num2: f64 = num2.trim().parse().expect("Please enter a number");
 
     println!("You entered {} and {}", num1, num2);
+
+
+    println!("Choose an operation (+, -, *, /):");
+    let mut op = String::new();
+    io::stdin().read_line(&mut op).expect("Failed to read line");
+    let op = op.trim();
+
 }
